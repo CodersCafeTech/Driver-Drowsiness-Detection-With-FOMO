@@ -72,7 +72,7 @@ void setup()
     Serial.begin(115200);
     // comment out the below line to cancel the wait for USB connection (needed for native USB)
     while (!Serial);
-    Serial.println("Edge Impulse Inferencing Demo");
+    Serial.println("Edge Impulse Inferencing");
 
     // initialise M4 RAM
     // Arduino Nicla Vision has 512KB of RAM allocated for M7 core
@@ -103,7 +103,7 @@ void loop()
       }
       count = 0;
     }
-    ei_printf("\nStarting inferencing in 2 seconds...\n");
+    ei_printf("\nStarting inferencing in 1 second...\n");
 
     // instead of wait_ms, we'll wait on the signal, this allows threads to cancel us...
     if (ei_sleep(1000) != EI_IMPULSE_OK) {
